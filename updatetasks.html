@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Σύστημα ανάθεσης καθηκόντων</title>
+    <title>Σύστημα ανάθεσης καθηκόντων update</title>
     <style>
         .nav-ul {
           list-style-type: none;
@@ -123,7 +123,19 @@
         /*padding-left: 25%;*/
         background-size:cover;
     }
-
+    .completeTaskBtn{
+      /*margin-left: 10%;*/
+      background-color: #1fb426;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .completeTaskBtn:hover {
+        background-color: #096f10;
+      }
 
 
       @media (max-width: 600px) {
@@ -157,100 +169,12 @@
     <table class="board">
       <tr>
         <div class="dayNote">
-            <h3>Δευτέρα 02/05/2022</h3>
-            <ul>
-            <li><a href="#">
-              <div class="task">
-                <strong>παραλαβή αλληλογραφίας</strong>
-                <span class="ico"></span>
-                <br>
-                παραλαβή της αλληλογραφίας από τα Ελτά
-                <br>
-                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
-                <br>
-                <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
-                <br>
-                <strong>Προτεραιότητα:1</strong>
-              </div>
-            </a></li>
-          </ul>
-        </div>
-      </tr>
-      <tr>
-        <div class="dayNote">
-            <h3>Τρίτη 03/05/2022</h3>
-            <ul>
-            <li><a href="#">
-              <div class="task">
-                <strong>παραλαβή αλληλογραφίας</strong>
-                <span class="ico"></span>
-                <br>
-                παραλαβή της αλληλογραφίας από τα Ελτά
-                <br>
-                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
-                <br>
-                <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
-                <br>
-                <strong>Προτεραιότητα:1</strong>
-              </div>
-              <div class="task">
-                <strong>Ελεγχος αποθήκης</strong>
-                <span class="ico"></span>
-                <br>
-                Ελεγχος των διαθέσιμων αποθεμάτων στην αποθήκη
-                <br>
-                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
-                <br>
-                <strong>Υπάλληλος:Αντωνιάδης Δημήτριος</strong>
-                <br>
-                <strong>Προτεραιότητα:2</strong>
-              </div>
-            </a></li>
-          </ul>
-        </div>
-      </tr>
-      <tr>
-        <div class="dayNote">
-          <h3>Τετάρτη 04/05/2022</h3>
-          <ul>
-          <li><a href="#">
-            <div class="task">
-              <strong>παραλαβή αλληλογραφίας</strong>
-              <span class="ico"></span>
-              <br>
-              παραλαβή της αλληλογραφίας από τα Ελτά
-              <br>
-              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
-              <br>
-              <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
-              <br>
-              <strong>Προτεραιότητα:1</strong>
-            </div>
-            <div class="task">
-              <strong>Αποστολή τιμολογίων</strong>
-              <span class="ico"></span>
-              <br>
-              Παραλαβή των τημολογίων απο το λογιστήριο και αποστλή τους
-              <br>
-              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
-              <br>
-              <strong>Υπάλληλος:Λουκάκος Αντώνης</strong>
-              <br>
-              <strong>Προτεραιότητα:2</strong>
-            </div>
-          </a></li>
-        </ul>
-      </div>
-      </tr>
-      <tr>
-        <div class="dayNote">
           <h3>Σήμερα</h3>
           <h3>Πέμπτη 04/05/2022</h3>
           <ul>
-          <li><a href="#">
+          <li>
             <div class="task">
               <strong>παραλαβή αλληλογραφίας</strong>
-              <span class="ico"></span>
               <br>
               παραλαβή της αλληλογραφίας από τα Ελτά
               <br>
@@ -259,10 +183,13 @@
               <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
               <br>
               <strong>Προτεραιότητα:1</strong>
+              <br>
+              <button class="completeTaskBtn">Ολοκλήρωση εργασίας</button>
             </div>
+          </li>
+          <li>
             <div class="task">
               <strong>Ελεγχος αποθήκης</strong>
-<!--                <span class="ico"></span>-->
               <br>
               Ελεγχος των διαθέσιμων αποθεμάτων στην αποθήκη
               <br>
@@ -271,8 +198,10 @@
               <strong>Υπάλληλος:Αντωνιάδης Δημήτριος</strong>
               <br>
               <strong>Προτεραιότητα:2</strong>
+              <br>
+              <button class="completeTaskBtn">Ολοκλήρωση εργασίας</button>
             </div>
-          </a></li>
+          </li>
         </ul>
       </div>
       </tr>
@@ -280,7 +209,7 @@
         <div class="dayNote">
           <h3>Παρασκευή 05/05/2022</h3>
           <ul>
-          <li><a href="#">
+          <li>
             <div class="task">
               <strong>παραλαβή αλληλογραφίας</strong>
               <span class=""></span>
@@ -293,6 +222,8 @@
               <br>
               <strong>Προτεραιότητα:1</strong>
             </div>
+          </li>
+          <li>
             <div class="task">
               <strong>Ελεγχος αποθήκης</strong>
 <!--                <span class="ico"></span>-->
@@ -305,7 +236,7 @@
               <br>
               <strong>Προτεραιότητα:2</strong>
             </div>
-          </a></li>
+          </li>
         </ul>
       </div>
       </tr>
