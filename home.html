@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Σύστημα ανάθεσης καθηκόντων</title>
+    <style>
+        .nav-ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          height: fit-content;
+        }
+
+        .nav-ul li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .nav-ul li a:hover {
+          background-color: #555;
+          color: white;
+        }
+
+        #logout:hover{
+          background-color: darkred;
+          font-weight: bold;
+        }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+         display: grid;
+         margin: 0;
+      }
+
+      header {
+        padding: 0.2vw;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+
+      section {
+        display: -webkit-flex;
+        display: flex;
+        min-height: 20vw;
+        grid-row-start:2 ;
+        grid-row-end:10 ;
+
+      }
+
+      nav {
+        background: #ccc;
+        padding: 20px;
+        width: fit-content;
+      }
+
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-image: url("corkpanel.jpg");
+        padding: 10px;
+      }
+
+      .board{
+        display: flex
+      }
+      .dayNote{
+        margin: 1%;
+        height: fit-content;
+        width: 95%;
+        padding: 1%;
+        background-image: url("whitepaper.jpg");
+        /*background-color: rgba(143, 68, 146, 0.58);*/
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        grid-row-start:10;
+        grid-row-end:11;
+        margin-bottom: 0;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+
+      h3{
+        color: #222222;
+        font-size: 1.5vw;
+        font-weight: bold;
+      }
+      a:link{
+        text-decoration: none;
+      }
+      .task{
+        margin-bottom: 0.5%;
+        display: -webkit-box;
+        vertical-align: center;
+        color: #222222;
+        background-color: rgba(100, 100, 100, 0.20);
+        font-size: 1vw;
+      }
+      .ico{
+        display:block;
+        text-decoration:none;
+        background:url('tick.png');
+        position:absolute;
+        width:2vw;
+        height:2vw;
+        margin-left: 25%;
+        /*padding-left: 25%;*/
+        background-size:cover;
+    }
+
+
+
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+
+</style>
+
+
+<body>
+
+<header>
+  <h2>Σύστημα ανάθεσης καθηκόντων</h2>
+</header>
+
+<section>
+  <nav>
+    <ul class="nav-ul">
+      <li><a href="home.html">Αρχική Σελίδα</a></li>
+      <li><a href="taskInsert.html">Καταχώρηση εργασίας</a></li>
+      <li><a href="managetasks.html">Δημιουργία προγράμματος</a></li>
+      <li><a href="#">Ενημέρωση προγράμματος</a></li>
+      <li><a id="logout" href="login.html">Αποσύνδεση</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <table class="board">
+      <tr>
+        <div class="dayNote">
+            <h3>Δευτέρα 02/05/2022</h3>
+            <ul>
+            <li><a href="#">
+              <div class="task">
+                <strong>παραλαβή αλληλογραφίας</strong>
+                <span class="ico"></span>
+                <br>
+                παραλαβή της αλληλογραφίας από τα Ελτά
+                <br>
+                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+                <br>
+                <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
+                <br>
+                <strong>Προτεραιότητα:1</strong>
+              </div>
+            </a></li>
+          </ul>
+        </div>
+      </tr>
+      <tr>
+        <div class="dayNote">
+            <h3>Τρίτη 03/05/2022</h3>
+            <ul>
+            <li><a href="#">
+              <div class="task">
+                <strong>παραλαβή αλληλογραφίας</strong>
+                <span class="ico"></span>
+                <br>
+                παραλαβή της αλληλογραφίας από τα Ελτά
+                <br>
+                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+                <br>
+                <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
+                <br>
+                <strong>Προτεραιότητα:1</strong>
+              </div>
+              <div class="task">
+                <strong>Ελεγχος αποθήκης</strong>
+                <span class="ico"></span>
+                <br>
+                Ελεγχος των διαθέσιμων αποθεμάτων στην αποθήκη
+                <br>
+                <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+                <br>
+                <strong>Υπάλληλος:Αντωνιάδης Δημήτριος</strong>
+                <br>
+                <strong>Προτεραιότητα:2</strong>
+              </div>
+            </a></li>
+          </ul>
+        </div>
+      </tr>
+      <tr>
+        <div class="dayNote">
+          <h3>Τετάρτη 04/05/2022</h3>
+          <ul>
+          <li><a href="#">
+            <div class="task">
+              <strong>παραλαβή αλληλογραφίας</strong>
+              <span class="ico"></span>
+              <br>
+              παραλαβή της αλληλογραφίας από τα Ελτά
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
+              <br>
+              <strong>Προτεραιότητα:1</strong>
+            </div>
+            <div class="task">
+              <strong>Αποστολή τιμολογίων</strong>
+              <span class="ico"></span>
+              <br>
+              Παραλαβή των τημολογίων απο το λογιστήριο και αποστλή τους
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:Λουκάκος Αντώνης</strong>
+              <br>
+              <strong>Προτεραιότητα:2</strong>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+      </tr>
+      <tr>
+        <div class="dayNote">
+          <h3>Σήμερα</h3>
+          <h3>Πέμπτη 04/05/2022</h3>
+          <ul>
+          <li><a href="#">
+            <div class="task">
+              <strong>παραλαβή αλληλογραφίας</strong>
+              <span class="ico"></span>
+              <br>
+              παραλαβή της αλληλογραφίας από τα Ελτά
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:Νικολαίδης Παναγώτης</strong>
+              <br>
+              <strong>Προτεραιότητα:1</strong>
+            </div>
+            <div class="task">
+              <strong>Ελεγχος αποθήκης</strong>
+<!--                <span class="ico"></span>-->
+              <br>
+              Ελεγχος των διαθέσιμων αποθεμάτων στην αποθήκη
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:Αντωνιάδης Δημήτριος</strong>
+              <br>
+              <strong>Προτεραιότητα:2</strong>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+      </tr>
+      <tr>
+        <div class="dayNote">
+          <h3>Παρασκευή 05/05/2022</h3>
+          <ul>
+          <li><a href="#">
+            <div class="task">
+              <strong>παραλαβή αλληλογραφίας</strong>
+              <span class=""></span>
+              <br>
+              παραλαβή της αλληλογραφίας από τα Ελτά
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:-</strong>
+              <br>
+              <strong>Προτεραιότητα:1</strong>
+            </div>
+            <div class="task">
+              <strong>Ελεγχος αποθήκης</strong>
+<!--                <span class="ico"></span>-->
+              <br>
+              Ελεγχος των διαθέσιμων αποθεμάτων στην αποθήκη
+              <br>
+              <strong>Υπεύθυνος:Παππαδόπουλος Κώστας</strong>
+              <br>
+              <strong>Υπάλληλος:-</strong>
+              <br>
+              <strong>Προτεραιότητα:2</strong>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+      </tr>
+
+    </table>
+  </article>
+</section>
+
+<footer>
+  <p>Σύστημα ανάθεσης καθηκόντων</p>
+</footer>
+
+</body>
+</html>

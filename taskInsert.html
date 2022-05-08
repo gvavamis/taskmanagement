@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Σύστημα ανάθεσης καθηκόντων καταχώρηση</title>
+    <style>
+        .nav-ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          height: fit-content;
+        }
+
+        .nav-ul li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .nav-ul li a:hover {
+          background-color: #555;
+          color: white;
+        }
+
+        #logout:hover{
+          background-color: darkred;
+          font-weight: bold;
+        }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+         display: grid;
+         margin: 0;
+      }
+
+      header {
+        padding: 0.2vw;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+
+      section {
+        /*display: -webkit-flex;*/
+        display: flex;
+        min-height: 100vh;
+        grid-row-start:2;
+        grid-row-end:10;
+        /*height: 30vw;*/
+      }
+
+      nav {
+        background: #ccc;
+        padding: 20px;
+        width: fit-content;
+      }
+
+
+      /* Style the content */
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-image: url("corkpanel.jpg");
+        padding: 10px;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        grid-row-start:10;
+        grid-row-end:11;
+        margin-bottom: 0;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+
+      h3{
+        color: #222222;
+        font-size: 1.5vw;
+        font-weight: bold;
+      }
+      a:link{
+        text-decoration: none;
+      }
+
+      input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=date], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type=submit] {
+        width: 100%;
+        background-color: #1fb426;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+        background-color: #096f10;
+      }
+
+      .form_div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .line{
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        border-bottom: 3px solid #222222;
+      }
+
+      /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+
+</style>
+
+
+<!--</head>-->
+<body>
+
+<header>
+  <h2>Σύστημα ανάθεσης καθηκόντων</h2>
+</header>
+
+<section>
+  <nav>
+    <ul class="nav-ul">
+      <li><a href="home.html">Αρχική Σελίδα</a></li>
+      <li><a href="taskInsert.html">Καταχώρηση εργασίας</a></li>
+      <li><a href="managetasks.html">Δημιουργία προγράμματος</a></li>
+      <li><a href="#">Ενημέρωση προγράμματος</a></li>
+      <li><a id="logout" href="login.html">Αποσύνδεση</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <div class="form_div">
+      <form action="home.html">
+        <label for="tasktitle">Τίτλος εργασίας</label>
+        <input type="text" id="tasktitle" name="task_title" placeholder="Σύντομος τίτλος">
+
+        <label for="taskdescription">Περιγραφή εργασίας</label>
+        <input type="text" id="taskdescription" name="task_description" placeholder="Περιγραφή εργασίας">
+
+        <label for="location">Τοποθεσία</label>
+        <input type="text" id="location" name="location" placeholder="Τοποθεσία">
+
+        <label for="taskpriority">Προτεραιότητα</label>
+        <select id="taskpriority" name="task_priority">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <div class="line"></div>
+
+        <label for="taskdate">Ημ/νια εκτέλεσης</label>
+        <input type="date" id="taskdate" name="task_date">
+
+<!--        <label for="taskuser">Αρμόδιος υπάλληλος</label>-->
+<!--        <select id="taskuser" name="task_user">-->
+<!--          <option value="Νικολαίδης Παναγώτης">Νικολαίδης Παναγώτης</option>-->
+<!--          <option value="Αντωνιάδης Δημήτριος">Αντωνιάδης Δημήτριος</option>-->
+<!--          <option value="Λουκάκος Αντώνης">Λουκάκος Αντώνης</option>-->
+<!--          <option value="Παππαδόπουλος Κώστας">Παππαδόπουλος Κώστας</option>-->
+<!--        </select>-->
+
+        <input type="submit" value="Υποβολή">
+      </form>
+    </div>
+
+
+  </article>
+</section>
+
+<footer>
+  <p>Σύστημα ανάθεσης καθηκόντων</p>
+</footer>
+
+</body>
+</html>

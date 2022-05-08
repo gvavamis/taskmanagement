@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Σύστημα ανάθεσης καθηκόντων Ενημέρωση</title>
+    <style>
+        .nav-ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          height: fit-content;
+        }
+
+        .nav-ul li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .nav-ul li a:hover {
+          background-color: #555;
+          color: white;
+        }
+
+        #logout:hover{
+          background-color: darkred;
+          font-weight: bold;
+        }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+         display: grid;
+         margin: 0;
+      }
+
+      header {
+        padding: 0.2vw;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+
+      section {
+        display: -webkit-flex;
+        display: flex;
+        min-height: 20vw;
+        grid-row-start:2 ;
+        grid-row-end:10 ;
+
+      }
+
+      nav {
+        background: #ccc;
+        padding: 20px;
+        width: fit-content;
+      }
+
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-image: url("corkpanel.jpg");
+        padding: 10px;
+      }
+
+      .board{
+        display: flex
+      }
+      .task_table{
+        height: fit-content;
+        width: 95%;
+        background-image: url("whitepaper.jpg");
+        /*background-color: rgba(143, 68, 146, 0.58);*/
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        grid-row-start:10;
+        grid-row-end:11;
+        margin-bottom: 0;
+        text-align: center;
+        color: #2d2d2d;
+        background-image: url("whitepaper.jpg");
+        font-weight: bold;
+        font-size:1.5vw;
+      }
+      h2{
+        color: #222222;
+        font-size: 1.9vw;
+        font-weight: bold;
+        padding: 1vh 1vw;
+        width: fit-content;
+        background-image: url("whitepaper.jpg");
+      }
+      h3{
+        color: #222222;
+        font-size: 1.5vw;
+        font-weight: bold;
+      }
+
+      a:link{
+        text-decoration: none;
+      }
+      input[type=date], select {
+        font-size: 0.8vw;
+        width: 10vw;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type=submit] {
+        width: 100%;
+        background-color: #1fb426;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .line{
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        border-bottom: 3px solid #222222;
+      }
+
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+
+</style>
+
+
+<body>
+
+<header>
+  <h2>Σύστημα ανάθεσης καθηκόντων</h2>
+</header>
+
+<section>
+  <nav>
+    <ul class="nav-ul">
+      <li><a href="home.html">Αρχική Σελίδα</a></li>
+      <li><a href="taskInsert.html">Καταχώρηση εργασίας</a></li>
+      <li><a href="managetasks.html">Δημιουργία προγράμματος</a></li>
+      <li><a href="#">Ενημέρωση προγράμματος</a></li>
+      <li><a id="logout" href="login.html">Αποσύνδεση</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h2>Μη ανατεθημένες εργασίες</h2>
+    <table class="board">
+      <tr>
+          <td>
+          <form action="home.html">
+          <table class="task_table">
+            <tr>
+              <td><h3>παραλαβή αλληλογραφίας</h3></td>
+            </tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td><p>παραλαβή της αλληλογραφίας από τα Ελτά</p></td>
+            </tr>
+            <tr><td>Τοποθεσία: Πατησίων 158 Αθήνα</td></tr>
+            <tr><td><strong>προτεραιότητα: 1 </strong></td></tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td>
+                  <label for="taskdate0">Ημ/νια εκτέλεσης</label>
+              </td>
+              <td style="text-align: end">
+                <input style="text-align: end" type="date" id="taskdate0" name="task_date">
+              </td>
+            </tr>
+            <tr>
+              <td><label for="taskuser0">Αρμόδιος υπάλληλος</label></td>
+              <td style="text-align: end">
+                <select style="text-align: end" id="taskuser0" name="task_user">
+                  <option value="Νικολαίδης Παναγώτης">Νικολαίδης Παναγώτης</option>
+                  <option value="Αντωνιάδης Δημήτριος">Αντωνιάδης Δημήτριος</option>
+                  <option value="Λουκάκος Αντώνης">Λουκάκος Αντώνης</option>
+                  <option value="Παππαδόπουλος Κώστας">Παππαδόπουλος Κώστας</option>
+                </select>
+              </td>
+            </tr>
+            <tr><td colspan="2" style="text-align: center">
+              <input type="submit" value="Χρέωση">
+            </td></tr>
+          </table>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <form action="home.html">
+          <table class="task_table">
+            <tr>
+              <td><h3>Ελεγχος οχημάτων</h3></td>
+            </tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td><p>Έλεγχος των εταιρικών οχημάτων για τυχόν φθορές και καταγραφή των χιλιομέτρων</p></td>
+            </tr>
+            <tr><td>Τοποθεσία: Ηλιουπόλεως 357 Αθήνα</td></tr>
+            <tr><td><strong>προτεραιότητα: 1 </strong></td></tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td>
+                  <label for="taskdate1">Ημ/νια εκτέλεσης</label>
+              </td>
+              <td style="text-align: end">
+                <input style="text-align: end" type="date" id="taskdate1" name="task_date">
+              </td>
+            </tr>
+            <tr>
+              <td><label for="taskuser1">Αρμόδιος υπάλληλος</label></td>
+              <td style="text-align: end">
+                <select style="text-align: end" id="taskuser1" name="task_user">
+                  <option value="Νικολαίδης Παναγώτης">Νικολαίδης Παναγώτης</option>
+                  <option value="Αντωνιάδης Δημήτριος">Αντωνιάδης Δημήτριος</option>
+                  <option value="Λουκάκος Αντώνης">Λουκάκος Αντώνης</option>
+                  <option value="Παππαδόπουλος Κώστας">Παππαδόπουλος Κώστας</option>
+                </select>
+              </td>
+            </tr>
+            <tr><td colspan="2" style="text-align: center">
+              <input type="submit" value="Χρέωση">
+            </td></tr>
+          </table>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <form action="home.html">
+          <table class="task_table">
+            <tr>
+              <td><h3>Ερευνά αγοράς γραφικής ύλης</h3></td>
+            </tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td><p>Ερευνά αγοράς για και λήψη προσφορών για την προμήθεια γραφικής ύλης</p></td>
+            </tr>
+            <tr><td>Τοποθεσία: Αθανασίου Διάκου 23 Αθήνα</td></tr>
+            <tr><td><strong>προτεραιότητα: 1 </strong></td></tr>
+            <tr><td colspan="2"><div class="line"></div></td></tr>
+            <tr>
+              <td>
+                  <label for="taskdate">Ημ/νια εκτέλεσης</label>
+              </td>
+              <td style="text-align: end">
+                <input style="text-align: end" type="date" id="taskdate" name="task_date">
+              </td>
+            </tr>
+            <tr>
+              <td><label for="taskuser">Αρμόδιος υπάλληλος</label></td>
+              <td style="text-align: end">
+                <select style="text-align: end" id="taskuser" name="task_user">
+                  <option value="Νικολαίδης Παναγώτης">Νικολαίδης Παναγώτης</option>
+                  <option value="Αντωνιάδης Δημήτριος">Αντωνιάδης Δημήτριος</option>
+                  <option value="Λουκάκος Αντώνης">Λουκάκος Αντώνης</option>
+                  <option value="Παππαδόπουλος Κώστας">Παππαδόπουλος Κώστας</option>
+                </select>
+              </td>
+            </tr>
+            <tr><td colspan="2" style="text-align: center">
+              <input type="submit" value="Χρέωση">
+            </td></tr>
+          </table>
+          </form>
+        </td>
+      </tr>
+
+    </table>
+
+
+
+
+
+  </article>
+</section>
+
+<footer>
+  <p>Σύστημα ανάθεσης καθηκόντων</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Σύστημα ανάθεσης καθηκόντων Login</title>
+  <style>
+    header {
+      padding: 0.2vw;
+      text-align: center;
+      color: #2d2d2d;
+      background-image: url("whitepaper.jpg");
+      font-weight: bold;
+      font-size:1.5vw;
+    }
+
+    body {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url("corkpanel.jpg");
+    }
+    form {
+      background-color: #cccccc;
+      border: 3px solid #f1f1f1;
+      width: 30%;
+      margin-top: 10%;
+      margin-left: 35%;
+      margin-right: 35%;
+    }
+    .main{
+      text-align: center;
+    }
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #0d724e;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: rgba(13, 114, 42, 0.78);
+    }
+
+    .container {
+      text-align: center;
+      padding: 16px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Σύστημα ανάθεσης καθηκόντων</h2>
+  </header>
+  <div class="main">
+    <form action="home.html" method="post">
+
+      <div class="container">
+        <label for="uname"><b>Όνομα χρήστη</b></label>
+        <input id="uname" type="text" placeholder="Όνομα χρήστη" name="uname">
+
+        <label for="psw"><b>Κωδικός Πρόσβασης</b></label>
+        <input id="psw" type="password" placeholder="Κωδικός Πρόσβασης" name="psw">
+
+        <button type="submit">Είσοδος</button>
+        <label>
+          <span >Ανάκτηση <a href="#">Κωδικού</a></span>
+        </label>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
